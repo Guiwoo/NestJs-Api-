@@ -1,5 +1,19 @@
 http://localhost:3000/movies
 ###
-post {
-    http://localhost:3000/movies
+POST http://localhost:3000/movies
+content-type: application/json
+
+{
+    "name":"Dune",
+    "director":"Nolan"
 }
+###
+PATCH http://localhost:3000/movies/12
+Content-Type: application/json
+
+{
+    "name":"Dune",
+    "director":"Nolan"
+}
+###
+GET http://localhost:3000/movies/search?year=1999
